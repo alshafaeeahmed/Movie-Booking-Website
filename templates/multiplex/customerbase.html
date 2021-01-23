@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+
+    <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+          name="viewport">
+    <!-- Import lib -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet" type="text/css">
+    <link fontawesome-free href="{% static " rel="stylesheet" type="text/css"
+    /css/all.min.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- End import lib -->
+
+    <link href="{% static " rel="stylesheet" style.css type="text/css"
+    " %}">
+
+</head>
+<body class="overlay-scrollbar">
+<!-- navbar -->
+<div class="navbar">
+    <!-- nav left -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="/customer-dashboard" style="text-decoration:none;"><img images src="{% static "/logo1.png" %}"
+                style="width:300px;height:40px;margin-top:10px;" class="navbar-brand" /></a>
+        </li>
+        <a class="sidebar-nav-link" href="/customer-home">
+            <div>
+                <i class="fas fa-home"></i>
+            </div>
+            <span>
+						Home
+					</span>
+        </a>
+
+        <a class="sidebar-nav-link" href="/customer-dashboard">
+            <div>
+                <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <span>
+                        Dashboard
+                    </span>
+        </a>
+
+        <a class="sidebar-nav-link" href="/customer-ticket">
+            <div>
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+            <span>
+                        Ticket
+                    </span>
+        </a>
+
+        <a class="sidebar-nav-link" href="/customer-feedback">
+            <div>
+                <i class="fas fa-comments"></i>
+            </div>
+            <span>FeedBack</span>
+        </a>
+    </ul>
+    <!-- end nav left -->
+    <!-- nav right -->
+    <ul class="navbar-nav nav-right">
+        <li class="nav-item avt-wrapper">
+            <div class="avt dropdown">
+                <img alt="User image" class="dropdown-toggle" data-toggle="user-menu"
+                     src="{% static  customer.profile_pic.url %} ">
+                <ul class="dropdown-menu" id="user-menu">
+
+                    <li class="dropdown-menu-item">
+                        <a class="dropdown-menu-link" href="/customer-profile">
+                            <div>
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown-menu-item">
+                        <a class="dropdown-menu-link" href="/logout">
+                            <div>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </div>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- end nav right -->
+</div>
+<!-- end navbar -->
+
+<div>
+    <!--content start-->
+    <div class="content">
+
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <!--content end-->
+</div>
+
+
+<!-- import script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script index.js src="{% static "
+" %}"></script>
+	<!-- end import script -->
+</body>
+</html>
